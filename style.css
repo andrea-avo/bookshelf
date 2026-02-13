@@ -1,0 +1,165 @@
+:root {
+  --bg-body: #ffffff;
+  --border: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --success-text: #166534;
+  --danger-text: #991b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+header h1 {
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section {
+  background: var(--bg-body);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+div:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  accent-color: var(--text-primary);
+}
+
+button {
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--text-secondary);
+  transition: all 0.2s;
+}
+
+#bookFormSubmit {
+  width: 100%;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+#searchSubmit {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  width: 100%;
+  margin-top: -15px;
+}
+
+div[data-testid="bookItem"] {
+  background: var(--bg-body);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+div[data-testid="bookItem"]:hover {
+  border-color: var(--bg-body);
+}
+
+h3[data-testid="bookItemTitle"] {
+  margin: 0 0 6px 0;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+p[data-testid="bookItemAuthor"],
+p[data-testid="bookItemYear"] {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+div[data-testid="bookItem"] > div {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button[data-testid="bookItemIsCompleteButton"] {
+  background-color: var(--bg-body);
+  color: var(--success-text);
+  border: 1px solid var(--success-text);
+  flex: 1;
+}
+
+button[data-testid="bookItemEditButton"] {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  border: 1px solid var(--text-secondary);
+}
+button[data-testid="bookItemDeleteButton"] {
+  background-color: var(--bg-body);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-text);
+}
